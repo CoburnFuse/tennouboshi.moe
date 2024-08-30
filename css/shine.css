@@ -1,0 +1,65 @@
+#starshine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }    
+      
+  .shine {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url(../images/sparkle.png);  
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100% 100%;
+    overflow: hidden;
+    z-index: 2;
+    color: tansparent;
+    -moz-opacity: 0.0;
+    opacity: 0.0;
+    animation: glitter 6s linear 0s infinite normal;
+    -webkit-animation: glitter 6s linear 0s infinite normal;
+    -moz-animation: glitter 8s linear 0s infinite normal;
+    -ms-animation: glitter 8s linear 0s infinite normal;
+    -o-animation: glitter 8s linear 0s infinite normal;
+  }
+  
+  .shine.small {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .shine.medium {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .shine.large {
+    width: 50px;
+    height: 50px;
+  }
+  
+  /*CSS3 keyframes for glittering effect*/
+  @-webkit-keyframes glitter {
+    0% {
+      -webkit-transform: scale(0.3) rotate(0deg);
+      opacity: 0;
+    }
+    25% {
+      -webkit-transform: scale(1) rotate(360deg);
+      opacity: 1;
+    }
+    50% {
+      -webkit-transform: scale(0.3) rotate(720deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(0.3) rotate(0deg);
+      opacity: 0;
+    }
+  }
